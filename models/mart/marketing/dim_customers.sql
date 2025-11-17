@@ -36,7 +36,7 @@ final as (
         c.first_order_date,
         c.most_recent_order_date,
         coalesce(c.number_of_orders, 0) as number_of_orders,
-        c.lifetime_amountusdd
+        c.lifetime_amountusddd
 
     from customers
     left join customer_orders c using (customer_id)
