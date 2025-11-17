@@ -18,7 +18,7 @@ customer_orders as (
         min(order_date) as first_order_date,
         max(order_date) as most_recent_order_date,
         count(order_id) as number_of_orders,
-        sum(amount) as lifetime_amountusd
+        sum(amount) as lifetime_amountusdd
 
     from stripe_details
 
@@ -36,7 +36,7 @@ final as (
         c.first_order_date,
         c.most_recent_order_date,
         coalesce(c.number_of_orders, 0) as number_of_orders,
-        c.lifetime_amountusd 
+        c.lifetime_amountusdd
 
     from customers
     left join customer_orders c using (customer_id)
