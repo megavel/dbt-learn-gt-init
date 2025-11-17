@@ -40,6 +40,8 @@ final as (
     from customers
 
     left join customer_orders using (customer_id)
+    
+    group by 1,2,3,4,5,6
 
 )
 
