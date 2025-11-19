@@ -1,0 +1,20 @@
+models:
+ - name: stg_stripe__payments
+   columns:
+     - name: paymentid
+       data_tests: 
+         - unique 
+         - not_null
+
+     - name: order_id
+       data_tests:
+         - relationships:
+            arguments:
+              to: ref('stg_jaffle_shop_orders')
+              field: order_id
+             
+     - name: paymentmethod
+       data_tests:
+         - accepted_values:
+            arguments:
+               values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
