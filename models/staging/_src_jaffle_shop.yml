@@ -8,10 +8,10 @@ sources:
           freshness:
             warn_after:
               count: 200
-              period: hour
+              period: day
             error_after:
               count: 200
-              period: hour
+              period: day
           loaded_at_field: _etl_loaded_at
 
   - name: stripe
@@ -22,10 +22,10 @@ sources:
           freshness:
             warn_after:
               count: 200
-              period: hour
+              period: day
             error_after:
               count: 200
-              period: hour
+              period: day
           loaded_at_field: _batched_at
 
     
