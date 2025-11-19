@@ -7,10 +7,10 @@ sources:
         config:
           freshness:
             warn_after:
-              count: 24
+              count: 200
               period: hour
             error_after:
-              count: 48
+              count: 200
               period: hour
           loaded_at_field: _etl_loaded_at
 
@@ -21,10 +21,10 @@ sources:
         config:
           freshness:
             warn_after:
-              count: 24
+              count: 200
               period: hour
             error_after:
-              count: 48
+              count: 200
               period: hour
           loaded_at_field: _batched_at
 

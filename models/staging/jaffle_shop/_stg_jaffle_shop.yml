@@ -2,9 +2,11 @@ models:
  - name: stg_jaffle_shop_customers
    columns:
      - name: customer_id
+       description: thisisthe description for customers
        data_tests:
          - unique 
          - not_null
+
  - name: stg_jaffle_shop_orders
    columns:
      - name: order_id
@@ -12,6 +14,7 @@ models:
          - unique
          - not_null
      - name: status
+       description: "{{doc('order_status')}}"
        data_tests:
          - accepted_values: 
              arguments:

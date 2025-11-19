@@ -2,6 +2,7 @@ models:
  - name: stg_stripe__payments
    columns:
      - name: paymentid
+       description: the primary key for the stripe payment model
        data_tests: 
          - unique 
          - not_null
@@ -14,6 +15,7 @@ models:
               field: order_id
              
      - name: paymentmethod
+       description: the payment method used for each orders by customers 
        data_tests:
          - accepted_values:
             arguments:
